@@ -4,16 +4,11 @@ if BattleFront == nil then
 	BattleFront = class({})
 end
 
-require("precache")
-
-function Precache( context )
-	--[[
-		Precache things we know we'll use.  Possible file types include (but not limited to):
-			PrecacheResource( "model", "*.vmdl", context )
-			PrecacheResource( "soundfile", "*.vsndevts", context )
-			PrecacheResource( "particle", "*.vpcf", context )
-			PrecacheResource( "particle_folder", "particles/folder", context )
-	]]
+function Precache(context)
+	local precache = require("precache")
+	for type, path in pairs(precache) do
+		PrecacheResource(type, path, context)
+	end
 end
 
 -- Create the game mode when we activate
