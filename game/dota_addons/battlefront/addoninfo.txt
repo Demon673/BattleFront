@@ -1,3 +1,26 @@
 "AddonInfo"
 {
+	"maps"			"battlefront"
+	"battlefront"
+	{
+		"MaxPlayers"                    "8"
+	}
+
+	"IsPlayable"	"1"
+
+	"Default_Keys"
+	{
+		// "01"
+		// {
+		// 	"Key"		"S"
+		//  	"Command" 	"CustomGameExecuteAbility1" // for press and release
+		//  	"Name"		"Execute Ability 1"
+		// }
+		// "02"
+		// {
+		// 	"Key"		"Z"
+		// 	"Command"	"+CustomGameTestButton"		// for a normal command
+		// 	"Name"		"Example"
+		// }
+	}
 }

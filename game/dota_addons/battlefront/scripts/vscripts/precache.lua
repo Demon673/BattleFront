@@ -7,5 +7,28 @@
 ]]
 return 
 {
+	item = 
+	{
 
+	},
+	unit = 
+	{
+
+	},
+	model = 
+	{
+
+	},
+	soundfile = 
+	{
+
+	},
+	particle = 
+	{
+
+	},
+	particle_folder = 
+	{
+
+	},
 }
