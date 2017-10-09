@@ -4,7 +4,7 @@
 --  *
 ---------------------------------------------------------------------------
 function BattleFront:AbilityTuningValueFilter(filterTable)
-    return true
+	return true
 end
 
 ---------------------------------------------------------------------------
@@ -12,7 +12,7 @@ end
 --  *
 ---------------------------------------------------------------------------
 function BattleFront:BountyRunePickupFilter(filterTable)
-    return true
+	return true
 end
 
 ---------------------------------------------------------------------------
@@ -24,7 +24,7 @@ end
 --	*damage
 ---------------------------------------------------------------------------
 function BattleFront:DamageFilter(filterTable)
-    return true
+	return true
 end
 
 ---------------------------------------------------------------------------
@@ -36,7 +36,7 @@ end
 --	*damage
 ---------------------------------------------------------------------------
 function BattleFront:ExecuteOrderFilter(filterTable)
-    return true
+	return true
 end
 
 ---------------------------------------------------------------------------

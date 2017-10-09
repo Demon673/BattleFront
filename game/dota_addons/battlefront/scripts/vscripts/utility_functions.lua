@@ -17,8 +17,8 @@ end
 ---------------------------------------------------------------------------
 function GetRandomElement( table )
 	local nRandomIndex = RandomInt( 1, #table )
-    local randomElement = table[ nRandomIndex ]
-    return randomElement
+	local randomElement = table[ nRandomIndex ]
+	return randomElement
 end
 
 ---------------------------------------------------------------------------
@@ -47,32 +47,38 @@ end
 -- string.split
 ---------------------------------------------------------------------------
 function string.split( str, sep )
-    local sep, fields = sep or ":", {}
-    local pattern = string.format("([^%s]+)", sep)
-    str:gsub(pattern, function(c) fields[#fields+1] = c end)
-    return fields
+	local sep, fields = sep or ":", {}
+	local pattern = string.format("([^%s]+)", sep)
+	str:gsub(pattern, function(c) fields[#fields+1] = c end)
+	return fields
 end
 
 ---------------------------------------------------------------------------
 -- shallowcopy
 ---------------------------------------------------------------------------
 function shallowcopy(orig)
-    local orig_type = type(orig)
-    local copy
-    if orig_type == 'table' then
-        copy = {}
-        for orig_key, orig_value in pairs(orig) do
-            copy[orig_key] = orig_value
-        end
-    else -- number, string, boolean, etc
-        copy = orig
-    end
-    return copy
+	local orig_type = type(orig)
+	local copy
+	if orig_type == 'table' then
+		copy = {}
+		for orig_key, orig_value in pairs(orig) do
+			copy[orig_key] = orig_value
+		end
+	else -- number, string, boolean, etc
+		copy = orig
+	end
+	return copy
 end
 
 ---------------------------------------------------------------------------
 -- Table functions
 ---------------------------------------------------------------------------
+function table.merge(input1, input2)
+	for k,v in pairs(input2) do
+		input1[k] = v
+	end
+end
+
 function PrintTable( t, indent )
 	--print( "PrintTable( t, indent ): " )
 	if type(t) ~= "table" then return end
@@ -143,13 +149,13 @@ function ConvertToTime( value )
 	if value <= 0 then
 		return "00:00:00";
 	else
-	    hours = string.format( "%02.f", math.floor( value / 3600 ) );
-	    mins = string.format( "%02.f", math.floor( value / 60 - ( hours * 60 ) ) );
-	    secs = string.format( "%02.f", math.floor( value - hours * 3600 - mins * 60 ) );
-	    if math.floor( value / 3600 ) == 0 then
-	    	return mins .. ":" .. secs
-	    end
-	    return hours .. ":" .. mins .. ":" .. secs
+		hours = string.format( "%02.f", math.floor( value / 3600 ) );
+		mins = string.format( "%02.f", math.floor( value / 60 - ( hours * 60 ) ) );
+		secs = string.format( "%02.f", math.floor( value - hours * 3600 - mins * 60 ) );
+		if math.floor( value / 3600 ) == 0 then
+			return mins .. ":" .. secs
+		end
+		return hours .. ":" .. mins .. ":" .. secs
 	end
 end
 

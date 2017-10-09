@@ -2,26 +2,31 @@
 -------------------------------------------------------
 -- game_rules_state_change
 ---------------------------------------------------------
-
 function BattleFront:OnGameRulesStateChange()
 	local nNewState = GameRules:State_Get()
 
-    if nNewState == DOTA_GAMERULES_STATE_INIT then
+	if nNewState == DOTA_GAMERULES_STATE_INIT then
 		--print( "OnGameRulesStateChange: Init" )
 
-    elseif nNewState == DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD then
+	elseif nNewState == DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD then
 		--print( "OnGameRulesStateChange: Wait For Players To Load" )
 
-    elseif nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
+	elseif nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
 		--print( "OnGameRulesStateChange: Custom Game Setup" )
 
-    elseif nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
+	elseif nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
 		--print( "OnGameRulesStateChange: Hero Selection" )
 
-    elseif nNewState == DOTA_GAMERULES_STATE_STRATEGY_TIME then
+	elseif nNewState == DOTA_GAMERULES_STATE_STRATEGY_TIME then
 		--print( "OnGameRulesStateChange: Strategy Time" )
+		for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
+			local hPlayer = PlayerResource:GetPlayer(nPlayerID)
+			if hPlayer and not PlayerResource:HasSelectedHero(nPlayerID) then
+				hPlayer:MakeRandomHeroSelection()
+			end
+		end
 
-    elseif nNewState == DOTA_GAMERULES_STATE_TEAM_SHOWCASE then
+	elseif nNewState == DOTA_GAMERULES_STATE_TEAM_SHOWCASE then
 		--print( "OnGameRulesStateChange: Team Showcase" )
 
 	elseif nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
@@ -36,14 +41,13 @@ function BattleFront:OnGameRulesStateChange()
 	elseif nNewState == DOTA_GAMERULES_STATE_DISCONNECT then
 		--print( "OnGameRulesStateChange: Disconnect" )
 
-    end
+	end
 end
 
 ---------------------------------------------------------
 -- dota_player_reconnected
 -- * player_id
 ---------------------------------------------------------
-
 function BattleFront:OnPlayerReconnected(event)
 	local hPlayer = PlayerResource:GetPlayer(event.player_id)
 	if hPlayer ~= nil then
@@ -57,7 +61,6 @@ end
 -- npc_spawned
 -- * entindex
 ---------------------------------------------------------
-
 function BattleFront:OnNPCSpawned(event)
 	local spawnedUnit = EntIndexToHScript(event.entindex)
 	if spawnedUnit ~= nil then
@@ -89,7 +92,6 @@ end
 -- * entindex_inflictor
 -- * damagebits
 ---------------------------------------------------------
-
 function BattleFront:OnEntityKilled(event)
 	local killedUnit = EntIndexToHScript(event.entindex_killed)
 	if killedUnit ~= nil then
@@ -126,7 +128,6 @@ end
 -- * caster (reviver hero entity index)
 -- * target (revivee hero entity index)
 ---------------------------------------------------------
-
 function BattleFront:OnPlayerRevived(event)
 	local hRevivedHero = EntIndexToHScript(event.target)
 	if hRevivedHero ~= nil and hRevivedHero:IsRealHero() then
@@ -138,7 +139,6 @@ end
 -- * entindex
 -- * player_id
 ---------------------------------------------------------
-
 function BattleFront:OnPlayerBuyback(event)
 	local hPlayer = PlayerResource:GetPlayer(event.player_id)
 	if hPlayer == nil then
@@ -156,7 +156,6 @@ end
 -- * player (player entity index)
 -- * level (new level)
 ---------------------------------------------------------
-
 function BattleFront:OnPlayerGainedLevel(event)
 end
 
@@ -165,7 +164,6 @@ end
 -- * player_id
 -- * item_ent_index
 ---------------------------------------------------------
-
 function BattleFront:OnItemSpawned(event)
 	local item = EntIndexToHScript(event.item_ent_index)
 	if item ~= nil then
@@ -180,7 +178,6 @@ end
 -- * itemname
 -- * ItemEntityIndex
 ---------------------------------------------------------
-
 function BattleFront:OnItemPickedUp(event)
 	local item = EntIndexToHScript(event.ItemEntityIndex)
 	local hero = EntIndexToHScript(event.HeroEntityIndex)
@@ -193,7 +190,6 @@ end
 -- * abilityname
 -- * caster_entindex
 ---------------------------------------------------------
-
 function BattleFront:OnNonPlayerUsedAbility(event)
 	local szAbilityName = event.abilityname
 	if event.caster_entindex == nil then
