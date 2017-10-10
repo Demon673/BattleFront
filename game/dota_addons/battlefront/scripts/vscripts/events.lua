@@ -6,19 +6,19 @@ function BattleFront:OnGameRulesStateChange()
 	local nNewState = GameRules:State_Get()
 
 	if nNewState == DOTA_GAMERULES_STATE_INIT then
-		--print( "OnGameRulesStateChange: Init" )
+		--print("OnGameRulesStateChange: Init")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD then
-		--print( "OnGameRulesStateChange: Wait For Players To Load" )
+		--print("OnGameRulesStateChange: Wait For Players To Load")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
-		--print( "OnGameRulesStateChange: Custom Game Setup" )
+		--print("OnGameRulesStateChange: Custom Game Setup")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
-		--print( "OnGameRulesStateChange: Hero Selection" )
+		--print("OnGameRulesStateChange: Hero Selection")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_STRATEGY_TIME then
-		--print( "OnGameRulesStateChange: Strategy Time" )
+		--print("OnGameRulesStateChange: Strategy Time")
 		for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
 			local hPlayer = PlayerResource:GetPlayer(nPlayerID)
 			if hPlayer and not PlayerResource:HasSelectedHero(nPlayerID) then
@@ -27,19 +27,19 @@ function BattleFront:OnGameRulesStateChange()
 		end
 
 	elseif nNewState == DOTA_GAMERULES_STATE_TEAM_SHOWCASE then
-		--print( "OnGameRulesStateChange: Team Showcase" )
+		--print("OnGameRulesStateChange: Team Showcase")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
-		--print( "OnGameRulesStateChange: Pre Game" )
+		--print("OnGameRulesStateChange: Pre Game")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		--print( "OnGameRulesStateChange: Game In Progress" )
+		--print("OnGameRulesStateChange: Game In Progress")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_POST_GAME then
-		--print( "OnGameRulesStateChange: Post Game" )
+		--print("OnGameRulesStateChange: Post Game")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_DISCONNECT then
-		--print( "OnGameRulesStateChange: Disconnect" )
+		--print("OnGameRulesStateChange: Disconnect")
 
 	end
 end
@@ -77,6 +77,14 @@ end
 function BattleFront:OnNPCSpawned_PlayerHero(event)
 	local hPlayerHero = EntIndexToHScript(event.entindex)
 	if hPlayerHero ~= nil then
+		local hModel = hPlayerHero:FirstMoveChild()
+		while hModel ~= nil do
+			if hModel:GetClassname() ~= "" and hModel:GetClassname() == "dota_item_wearable" then
+				hModel:RemoveSelf()
+			end
+			hModel = hModel:NextMovePeer()
+		end
+		hPlayerHero:SetForwardVector(Vector(1,0,0))
 	end
 end
 function BattleFront:OnNPCSpawned_Creature(event)
