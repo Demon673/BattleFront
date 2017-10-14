@@ -77,14 +77,6 @@ end
 function BattleFront:OnNPCSpawned_PlayerHero(event)
 	local hPlayerHero = EntIndexToHScript(event.entindex)
 	if hPlayerHero ~= nil then
-		local hModel = hPlayerHero:FirstMoveChild()
-		while hModel ~= nil do
-			if hModel:GetClassname() ~= "" and hModel:GetClassname() == "dota_item_wearable" then
-				hModel:RemoveSelf()
-			end
-			hModel = hModel:NextMovePeer()
-		end
-		hPlayerHero:SetForwardVector(Vector(1,0,0))
 	end
 end
 function BattleFront:OnNPCSpawned_Creature(event)

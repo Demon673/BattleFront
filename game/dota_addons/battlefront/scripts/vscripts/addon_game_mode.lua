@@ -9,6 +9,7 @@ require("filters")
 
 --mechanics
 require("mechanics/wearables")
+require("mechanics/region")
 
 --libraries
 require("libraries/keyvalues")
@@ -35,20 +36,40 @@ function Activate()
 end
 
 function BattleFront:InitGameMode()
+	--mechanics/wearables
 	if IsInToolsMode() then
 		MakeSets()
 	end
-
+	GameRules.TeamPosition = {}
 	if GetMapName() == "battlefront" then
+		GameRules.TeamPosition[DOTA_TEAM_GOODGUYS] = 1
 		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, 1)
+
+		GameRules.TeamPosition[DOTA_TEAM_BADGUYS] = 2
 		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, 1)
+
+		GameRules.TeamPosition[DOTA_TEAM_CUSTOM_1] = 3
 		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_1, 1)
+
+		GameRules.TeamPosition[DOTA_TEAM_CUSTOM_2] = 4
 		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_2, 1)
+
+		GameRules.TeamPosition[DOTA_TEAM_CUSTOM_3] = 5
 		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_3, 1)
+
+		GameRules.TeamPosition[DOTA_TEAM_CUSTOM_4] = 6
 		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_4, 1)
+
+		GameRules.TeamPosition[DOTA_TEAM_CUSTOM_5] = 7
 		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_5, 1)
+
+		GameRules.TeamPosition[DOTA_TEAM_CUSTOM_6] = 8
 		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_CUSTOM_6, 1)
+
+		GameRules.TeamPosition.MAX_POSITION = 8
 	end
+
+	Region:Init()
 
 	GameRules:SetUseUniversalShopMode(true)
 

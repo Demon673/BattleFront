@@ -15,7 +15,7 @@ function MakeSets()
 end
 
 function GenerateAllSetsForHero( file, heroName )
-	local indent = "    "
+	local indent = "		"
 	file:write(indent..string.rep("/", 60).."\n")
 	file:write(indent.."// Cosmetic Sets for "..heroName.."\n")
 	file:write(indent..string.rep("/", 60).."\n")
@@ -47,10 +47,10 @@ function MapWearables()
 end
 
 function GenerateDefaultBlock( file, heroName )
-	file:write("    \"Creature\"\n")
-	file:write("    {\n")
-	file:write("        \"AttachWearables\" ".."// Default "..heroName.."\n")
-	file:write("        {\n")
+	file:write("		\"Creature\"\n")
+	file:write("		{\n")
+	file:write("			\"AttachWearables\" ".."// Default "..heroName.."\n")
+	file:write("			{\n")
 	local defCount = 1
 	for code,values in pairs(GameRules.items) do
 		if values.name and values.prefab == "default_item" and values.used_by_heroes then
@@ -63,8 +63,8 @@ function GenerateDefaultBlock( file, heroName )
 			end
 		end
 	end
-	file:write("        }\n")
-	file:write("    }\n")
+	file:write("			}\n")
+	file:write("		}\n")
 end
 
 function GenerateBundleBlock( file, setname )
@@ -75,10 +75,10 @@ function GenerateBundleBlock( file, setname )
 		end
 	end
 
-	file:write("    \"Creature\"\n")
-	file:write("    {\n")
-	file:write("        \"AttachWearables\" ".."// "..setname.."\n")
-	file:write("        {\n")
+	file:write("		\"Creature\"\n")
+	file:write("		{\n")
+	file:write("			\"AttachWearables\" ".."// "..setname.."\n")
+	file:write("			{\n")
 	local wearableCount = 1
 	for k,v in pairs(bundle) do
 		local itemID = GameRules.modelmap[k]
@@ -87,10 +87,10 @@ function GenerateBundleBlock( file, setname )
 			wearableCount = wearableCount+1
 		end
 	end
-	file:write("        }\n")
-	file:write("    }\n")
+	file:write("			}\n")
+	file:write("		}\n")
 end
 
 function GenerateItemDefLine( file, i, itemID, comment )
-	file:write("            \""..tostring(i).."\" { ".."\"ItemDef\" \""..itemID.."\" } // "..comment.."\n")
+	file:write("				\""..tostring(i).."\" { ".."\"ItemDef\" \""..itemID.."\" } // "..comment.."\n")
 end
