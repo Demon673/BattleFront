@@ -1,5 +1,13 @@
 // Units File
-#base "units/melee_creep.kv"
+#base "units/base/melee_creep.kv"
+#base "units/base/range_creep.kv"
+#base "units/base/wolf.kv"
+#base "units/base/satyr.kv"
+#base "units/base/wildkin.kv"
+#base "units/base/centaur.kv"
+#base "units/base/ogre_magi.kv"
+#base "units/base/bear.kv"
+#base "units/base/treant.kv"
 
 "DOTAUnits"
 {

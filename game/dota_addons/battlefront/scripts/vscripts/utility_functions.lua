@@ -172,3 +172,31 @@ end
 
 --------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------
+-- CBaseTrigger
+---------------------------------------------------------------------------
+
+function CBaseTrigger:IsPositionInTrigger(vLocation)
+	local vMin = self:GetBoundingMins()+self:GetOrigin()
+	local vMax = self:GetBoundingMaxs()+self:GetOrigin()
+	if vLocation.x <= vMax.x and vLocation.x >= vMin.x 
+	and vLocation.y <= vMax.y and vLocation.y >= vMin.y
+	and vLocation.z <= vMax.z and vLocation.z >= vMin.z then
+		return true
+	end
+
+	return false
+end
+
+
+function CBaseTrigger:IsPositionInTrigger2D(vLocation)
+	local vMin = self:GetBoundingMins()+self:GetOrigin()
+	local vMax = self:GetBoundingMaxs()+self:GetOrigin()
+	if vLocation.x <= vMax.x and vLocation.x >= vMin.x 
+	and vLocation.y <= vMax.y and vLocation.y >= vMin.y then
+		return true
+	end
+
+	return false
+end
+--------------------------------------------------------------------------------

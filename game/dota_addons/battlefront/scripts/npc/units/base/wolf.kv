@@ -1,9 +1,9 @@
 "DOTAUnits"
 {
 	//=================================================================================
-	// Creature: Satyr level1
+	// Creature: Wolf level1
 	//=================================================================================
-	"satyr_lv1"
+	"wolf_lv1"
 	{
 		//Scripts
 		"vscripts"					""
@@ -14,7 +14,7 @@
 
 		"Level"						"1"
 
-		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_c/n_creep_satyr_b.vmdl"	// Model.
+		"Model"						"models/creeps/neutral_creeps/n_creep_worg_small/n_creep_worg_small.vmdl"	// Model.
 		"ModelScale" 				"1.00"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -22,7 +22,7 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
@@ -40,7 +40,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"satyr"
+		"SelectionGroup"			"wolf"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -65,17 +65,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"7"			// Damage range min.
-		"AttackDamageMax"			"7"			// Damage range max.
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"5"			// Damage range min.
+		"AttackDamageMax"			"5"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1.35"		// Speed of attack.
-		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRate"				"1.45"      // Speed of attack.
+		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
-		"ProjectileModel"			"particles/neutral_fx/satyr_trickster_projectile.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed"			"1500"		// Speed of projectile.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			""			// Speed of projectile.
 
 		// Attributes
 		//----------------------------------------------------------------
@@ -97,8 +97,8 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
 		// "ProjectileCollisionSize"	"50"
-		"RingRadius"				"50"
-		"HealthBarOffset"			"190"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"130"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -153,9 +153,9 @@
 		}
 	}
 	//=================================================================================
-	// Creature: Satyr level2
+	// Creature: Wolf level2
 	//=================================================================================
-	"satyr_lv2"
+	"wolf_lv2"
 	{
 		//Scripts
 		"vscripts"					""
@@ -166,7 +166,7 @@
 
 		"Level"						"2"
 
-		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_c/n_creep_satyr_c.vmdl"	// Model.
+		"Model"						"models/creeps/neutral_creeps/n_creep_worg_small/n_creep_worg_small.vmdl"	// Model.
 		"ModelScale" 				"1.40"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -192,7 +192,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"satyr"
+		"SelectionGroup"			"wolf"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -221,8 +221,8 @@
 		"AttackDamageMin"			"10"		// Damage range min.
 		"AttackDamageMax"			"10"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1.35"		// Speed of attack.
-		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackRate"				"1.40"		// Speed of attack.
+		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
 		"AttackRange"				"100"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
@@ -249,8 +249,8 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
 		// "ProjectileCollisionSize"	"50"
-		"RingRadius"				"50"
-		"HealthBarOffset"			"190"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"130"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -305,9 +305,9 @@
 		}
 	}
 	//=================================================================================
-	// Creature: Satyr level3
+	// Creature: Wolf level3
 	//=================================================================================
-	"satyr_lv3"
+	"wolf_lv3"
 	{
 		//Scripts
 		"vscripts"					""
@@ -318,7 +318,7 @@
 
 		"Level"						"3"
 
-		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.vmdl"	// Model.
+		"Model"						"models/creeps/neutral_creeps/n_creep_worg_large/n_creep_worg_large.vmdl"	// Model.
 		"ModelScale" 				"1.50"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -344,7 +344,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"satyr"
+		"SelectionGroup"			"wolf"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -374,7 +374,7 @@
 		"AttackDamageMax"			"30"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.35"		// Speed of attack.
-		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
 		"AttackRange"				"100"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
@@ -401,8 +401,8 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
 		// "ProjectileCollisionSize"	"50"
-		"RingRadius"				"50"
-		"HealthBarOffset"			"190"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"130"
 
 		// Movement
 		//----------------------------------------------------------------

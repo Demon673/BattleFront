@@ -8,8 +8,9 @@ require("events")
 require("filters")
 
 --mechanics
-require("mechanics/wearables")
 require("mechanics/region")
+require("mechanics/unit_tree")
+require("mechanics/wearables")
 
 --libraries
 require("libraries/keyvalues")
@@ -72,6 +73,8 @@ function BattleFront:InitGameMode()
 	Region:Init()
 
 	GameRules:SetUseUniversalShopMode(true)
+
+	LinkLuaModifier("modifier_hero", "modifiers/modifier_hero.lua", LUA_MODIFIER_MOTION_NONE)
 
 	ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(BattleFront, "OnGameRulesStateChange"), self)
 	ListenToGameEvent("dota_player_reconnected", Dynamic_Wrap(BattleFront, "OnPlayerReconnected"), self)

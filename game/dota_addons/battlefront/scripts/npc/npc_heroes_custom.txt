@@ -41,7 +41,7 @@
 		"AttributeBaseAgility"		"0"
 		"AttributeAgilityGain"		"0"
 
-		"Ability1"					""
+		"Ability1"					"purchase_unit"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -69,7 +69,7 @@
 		"BoundsHullName"			"DOTA_HULL_SIZE_BUILDING"
 		"RingRadius"				"350"
 
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"0"
 		"MovementTurnRate"			"0"
 

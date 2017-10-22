@@ -77,6 +77,14 @@ end
 function BattleFront:OnNPCSpawned_PlayerHero(event)
 	local hPlayerHero = EntIndexToHScript(event.entindex)
 	if hPlayerHero ~= nil then
+		hPlayerHero:AddNewModifier(hPlayerHero, nil, "modifier_hero", nil)
+
+		for i = 0, hPlayerHero:GetAbilityCount()-1, 1 do
+			local hAbility = hPlayerHero:GetAbilityByIndex(i)
+			if hAbility then
+				hAbility:SetLevel(1)
+			end
+		end
 	end
 end
 function BattleFront:OnNPCSpawned_Creature(event)
