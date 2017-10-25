@@ -2,18 +2,22 @@ if BattleFront == nil then
 	_G.BattleFront = class({})
 end
 
+--generals
 require("constants")
 require("utility_functions")
-require("events")
-require("filters")
+
+--libraries
+require("libraries/keyvalues")
 
 --mechanics
 require("mechanics/region")
 require("mechanics/unit_tree")
 require("mechanics/wearables")
 
---libraries
-require("libraries/keyvalues")
+--process
+require("events")
+require("filters")
+require("round")
 
 function Precache(context)
 	local precache = require("precache")
@@ -72,8 +76,20 @@ function BattleFront:InitGameMode()
 
 	Region:Init()
 
+	GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
+	GameRules:GetGameModeEntity():SetCustomGameForceHero("npc_dota_hero_visage")
+	
 	GameRules:SetUseUniversalShopMode(true)
+	GameRules:SetHeroRespawnEnabled(false)
 
+	GameRules:SetStartingGold(500)
+	GameRules:SetGoldPerTick(0)
+	
+	GameRules:SetHeroSelectionTime(0)
+	GameRules:SetStrategyTime(2)
+	GameRules:SetShowcaseTime(0)
+	GameRules:SetPreGameTime(0)
+	
 	LinkLuaModifier("modifier_hero", "modifiers/modifier_hero.lua", LUA_MODIFIER_MOTION_NONE)
 
 	ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(BattleFront, "OnGameRulesStateChange"), self)

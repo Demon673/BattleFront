@@ -25,7 +25,7 @@ return
 	},
 	particle = 
 	{
-
+		"particles/round/barrier_wall.vpcf",
 	},
 	particle_folder = 
 	{

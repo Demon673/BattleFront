@@ -30,6 +30,7 @@ function BattleFront:OnGameRulesStateChange()
 		--print("OnGameRulesStateChange: Team Showcase")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
+		Round:Init()
 		--print("OnGameRulesStateChange: Pre Game")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
