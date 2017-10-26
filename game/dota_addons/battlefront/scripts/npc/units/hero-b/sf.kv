@@ -1,0 +1,546 @@
+"DOTAUnits"
+{
+	//=================================================================================
+	// Creature: drowranger level1
+	//=================================================================================
+	"drowranger_lv1"
+	{
+		//Scripts
+		"vscripts"					""
+
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+
+		"Level"						"1"
+
+		"Model"						"models/heroes/drow/drow.vmdl"	// Model.
+		"ModelScale" 				"0.8"
+
+		// "MinimapIcon"				"minimap_tower90"
+		// "MinimapIconSize"			"320"
+
+		// Sounds
+		//----------------------------------------------------------------
+		"SoundSet"					"Hero_DrowRanger"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+		// "IdleExpression"			"scenes/default_idle.vcd"
+
+		// Flags
+		//----------------------------------------------------------------
+		"HasInventory"				"1"
+		"UnitLabel"					""
+		"ConsideredHero"			"0"
+		"IsAncient"					"0"
+		"IsNeutralUnitType"			"0"
+		"CanBeDominated"			"0"
+		"AutoAttacksByDefault"		"1"
+		"ShouldDoFlyHeightVisual"	"0"
+		"WakesNeutrals"				"1"
+
+		// Selection
+		//----------------------------------------------------------------
+		"SelectionGroup"			"drowranger"
+		"SelectOnSpawn"				"1"
+		"IgnoreAddSummonedToSelection" "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+		"Ability5"					""			// Ability 5 - Extra.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+		"AbilitiesLevel"
+		{
+		}
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"			// Physical protection.
+		"MagicalResistance"			"0"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"40"			// Damage range min.
+		"AttackDamageMax"			"40"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.45"      // Speed of attack.
+		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
+		"ProjectileModel"			"particles/units/heroes/hero_drow/drow_base_attack.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"900"			// Speed of projectile.
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"			// Base strength
+		"AttributeStrengthGain"		"0"			// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"			// Base intelligence
+		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"			// Base agility
+		"AttributeAgilityGain"		"0"			// Agility bonus per level.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"			// Experience earn.
+		"BountyGoldMin"				"10"		// Gold earned min.
+		"BountyGoldMax"				"10"		// Gold earned max.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
+		// "ProjectileCollisionSize"	"50"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"130"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"325"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+		"HasAggressiveStance"		"0"
+		"FollowRange"				"100"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"600"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+		"StatusStartingMana"		"-1"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			//Attach Wearables
+			"AttachWearables"
+			{
+					"Wearable1"
+					{
+						"ItemDef"           "5194"  
+					}
+					"Wearable2"
+					{
+						"ItemDef"           "5195"  
+					}
+					"Wearable3"
+					{
+						"ItemDef"           "5196"  
+					}
+					"Wearable4"
+					{
+						"ItemDef"           "5197"  
+					}
+
+					"Wearable5"
+					{
+						"ItemDef"           "5198"  
+					}
+					"Wearable6"
+					{
+						"ItemDef"           "5199"  
+					}
+					"Wearable7"
+					{
+						"ItemDef"           "5200"  
+					}
+			}
+			//Clumping Behavior
+			"DisableClumpingBehavior"	"0"
+			//Level Up
+			"HPGain"					"0"
+			"DamageGain"				"0"
+			"ArmorGain"					"0"
+			"MagicResistGain"			"0"
+			"MoveSpeedGain"				"0"
+			"BountyGain"				"0"
+			"XPGain"					"0"
+			//Respawn
+			"CanRespawn"				"0"
+			//Disable Resistance
+			"DisableResistance"			"0"
+		}
+	}
+	//=================================================================================
+	// Creature: drowranger level2
+	//=================================================================================
+	"drowranger_lv2"
+	{
+		//Scripts
+		"vscripts"					""
+
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+
+		"Level"						"2"
+
+		"Model"						"models/heroes/drow/drow.vmdl"	// Model.
+		"ModelScale" 				"1.00"
+
+		// "MinimapIcon"				"minimap_tower90"
+		// "MinimapIconSize"			"320"
+
+		// Sounds
+		//----------------------------------------------------------------
+		"SoundSet"					"Hero_DrowRanger"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+		// "IdleExpression"			"scenes/default_idle.vcd"
+
+		// Flags
+		//----------------------------------------------------------------
+		"HasInventory"				"1"
+		"UnitLabel"					""
+		"ConsideredHero"			"0"
+		"IsAncient"					"0"
+		"IsNeutralUnitType"			"0"
+		"CanBeDominated"			"0"
+		"AutoAttacksByDefault"		"1"
+		"ShouldDoFlyHeightVisual"	"0"
+		"WakesNeutrals"				"1"
+
+		// Selection
+		//----------------------------------------------------------------
+		"SelectionGroup"			"drowranger"
+		"SelectOnSpawn"				"1"
+		"IgnoreAddSummonedToSelection" "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+		"Ability5"					""			// Ability 5 - Extra.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+		"AbilitiesLevel"
+		{
+		}
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"			"0"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"110"		// Damage range min.
+		"AttackDamageMax"			"110"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.40"		// Speed of attack.
+		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
+		"ProjectileModel"			"particles/units/heroes/hero_drow/drow_base_attack.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"900"			// Speed of projectile.
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"			// Base strength
+		"AttributeStrengthGain"		"0"			// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"			// Base intelligence
+		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"			// Base agility
+		"AttributeAgilityGain"		"0"			// Agility bonus per level.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"			// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"20"		// Gold earned max.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
+		// "ProjectileCollisionSize"	"50"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"130"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"325"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+		"HasAggressiveStance"		"0"
+		"FollowRange"				"100"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1100"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+		"StatusStartingMana"		"-1"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			//Attach Wearables
+			"AttachWearables"
+			{
+					"Wearable1"
+					{
+						"ItemDef"           "5883"  
+					}
+					"Wearable2"
+					{
+						"ItemDef"           "5974"  
+					}
+					"Wearable3"
+					{
+						"ItemDef"           "5975"  
+					}
+					"Wearable4"
+					{
+						"ItemDef"           "5979"  
+					}
+
+					"Wearable5"
+					{
+						"ItemDef"           "5985"  
+					}
+					"Wearable6"
+					{
+						"ItemDef"           "5986"  
+					}
+					 "Wearable7"
+					{
+						"ItemDef"           "5989"  
+					}
+			}
+			//Clumping Behavior
+			"DisableClumpingBehavior"	"0"
+			//Level Up
+			"HPGain"					"0"
+			"DamageGain"				"0"
+			"ArmorGain"					"0"
+			"MagicResistGain"			"0"
+			"MoveSpeedGain"				"0"
+			"BountyGain"				"0"
+			"XPGain"					"0"
+			//Respawn
+			"CanRespawn"				"0"
+			//Disable Resistance
+			"DisableResistance"			"0"
+		}
+	}
+	//=================================================================================
+	// Creature: drowranger level3
+	//=================================================================================
+	"drowranger_lv3"
+	{
+		//Scripts
+		"vscripts"					""
+
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+
+		"Level"						"3"
+
+		"Model"						"models/heroes/drow/drow.vmdl"	// Model.
+		"ModelScale" 				"1.50"
+
+		// "MinimapIcon"				"minimap_tower90"
+		// "MinimapIconSize"			"320"
+
+		// Sounds
+		//----------------------------------------------------------------
+		"SoundSet"					"Hero_DrowRanger"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+		// "IdleExpression"			"scenes/default_idle.vcd"
+
+		// Flags
+		//----------------------------------------------------------------
+		"HasInventory"				"1"
+		"UnitLabel"					""
+		"ConsideredHero"			"0"
+		"IsAncient"					"0"
+		"IsNeutralUnitType"			"0"
+		"CanBeDominated"			"0"
+		"AutoAttacksByDefault"		"1"
+		"ShouldDoFlyHeightVisual"	"0"
+		"WakesNeutrals"				"1"
+
+		// Selection
+		//----------------------------------------------------------------
+		"SelectionGroup"			"drowranger"
+		"SelectOnSpawn"				"1"
+		"IgnoreAddSummonedToSelection" "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+		"Ability5"					""			// Ability 5 - Extra.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+		"AbilitiesLevel"
+		{
+		}
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+		"MagicalResistance"			"0"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"200"		// Damage range min.
+		"AttackDamageMax"			"200"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.35"		// Speed of attack.
+		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
+		"ProjectileModel"			"particles/units/heroes/hero_drow/drow_base_attack.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"900"			// Speed of projectile.
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"			// Base strength
+		"AttributeStrengthGain"		"0"			// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"			// Base intelligence
+		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"			// Base agility
+		"AttributeAgilityGain"		"0"			// Agility bonus per level.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"			// Experience earn.
+		"BountyGoldMin"				"40"		// Gold earned min.
+		"BountyGoldMax"				"40"		// Gold earned max.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
+		// "ProjectileCollisionSize"	"50"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"130"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"325"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+		"HasAggressiveStance"		"0"
+		"FollowRange"				"100"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+		"StatusStartingMana"		"-1"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			//Attach Wearables
+			"AttachWearables"
+			{
+					"Wearable1"
+					{
+						"ItemDef"           "6552"  
+					}
+					"Wearable2"
+					{
+						"ItemDef"           "6553"  
+					}
+					"Wearable3"
+					{
+						"ItemDef"           "6554"  
+					}
+					"Wearable4"
+					{
+						"ItemDef"           "6555"  
+					}
+
+					"Wearable5"
+					{
+						"ItemDef"           "6556"  
+					}
+					"Wearable6"
+					{
+						"ItemDef"           "6557"  
+					}
+					 "Wearable7"
+					{
+						"ItemDef"           "6558"  
+					}
+			}
+			//Clumping Behavior
+			"DisableClumpingBehavior"	"0"
+			//Level Up
+			"HPGain"					"0"
+			"DamageGain"				"0"
+			"ArmorGain"					"0"
+			"MagicResistGain"			"0"
+			"MoveSpeedGain"				"0"
+			"BountyGain"				"0"
+			"XPGain"					"0"
+			//Respawn
+			"CanRespawn"				"0"
+			//Disable Resistance
+			"DisableResistance"			"0"
+		}
+	}
+}

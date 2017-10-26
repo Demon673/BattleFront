@@ -1,9 +1,9 @@
 "DOTAUnits"
 {
 	//=================================================================================
-	// Creature: Sven level1
+	// Creature: windranger level1
 	//=================================================================================
-	"sven_lv1"
+	"windranger_lv1"
 	{
 		//Scripts
 		"vscripts"					""
@@ -14,7 +14,7 @@
 
 		"Level"						"1"
 
-		"Model"						"models/heroes/sven/sven.vmdl"	// Model.
+		"Model"						"models/heroes/windrunner/windrunner.vmdl"	// Model.
 		"ModelScale" 				"0.8"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -22,8 +22,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_Sven"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"SoundSet"					"Hero_Windrunner"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -40,7 +40,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"sven"
+		"SelectionGroup"			"windranger"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -65,17 +65,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"40"			// Damage range min.
 		"AttackDamageMax"			"40"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.45"      // Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"600"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
-		"ProjectileModel"			""			// Particle system model for projectile.
-		"ProjectileSpeed"			""			// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"700"			// Speed of projectile.
 
 		// Attributes
 		//----------------------------------------------------------------
@@ -135,25 +135,25 @@
 			//Attach Wearables
 			"AttachWearables"
 			{
-				"Wearable1" 
-				{ 
-					"ItemDef"           "16"
+				"Wearable1"
+				{
+					"ItemDef"           "4552"  
 				}
-				"Wearable2" 
-				{ 
-					"ItemDef"           "17"
+				"Wearable2"
+				{
+					"ItemDef"           "4559"  
 				}
 				"Wearable3"
 				{
-					"ItemDef"           "18"  
+					"ItemDef"           "4554"  
 				}
 				"Wearable4"
 				{
-					"ItemDef"           "19"  
+					"ItemDef"           "4562"  
 				}
 				"Wearable5"
 				{
-					"ItemDef"           "20"  
+					"ItemDef"           "4553"  
 				}
 			}
 			//Clumping Behavior
@@ -173,9 +173,9 @@
 		}
 	}
 	//=================================================================================
-	// Creature: Sven level2
+	// Creature: windranger level2
 	//=================================================================================
-	"sven_lv2"
+	"windranger_lv2"
 	{
 		//Scripts
 		"vscripts"					""
@@ -186,7 +186,7 @@
 
 		"Level"						"2"
 
-		"Model"						"models/heroes/sven/sven.vmdl"	// Model.
+		"Model"						"models/heroes/windrunner/windrunner.vmdl"	// Model.
 		"ModelScale" 				"1.00"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -194,8 +194,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_Sven"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"SoundSet"					"Hero_Windrunner"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -212,7 +212,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"sven"
+		"SelectionGroup"			"windranger"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -237,17 +237,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"110"		// Damage range min.
 		"AttackDamageMax"			"110"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.40"		// Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"600"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
-		"ProjectileModel"			""			// Particle system model for projectile.
-		"ProjectileSpeed"			""			// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"700"			// Speed of projectile.
 
 		// Attributes
 		//----------------------------------------------------------------
@@ -309,23 +309,23 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"           "5403"  
+					"ItemDef"           "4552"  
 				}
 				"Wearable2"
 				{
-					"ItemDef"           "5399"  
+					"ItemDef"           "4559"  
 				}
 				"Wearable3"
 				{
-					"ItemDef"           "5400"  
+					"ItemDef"           "4554"  
 				}
 				"Wearable4"
 				{
-					"ItemDef"           "5401"  
+					"ItemDef"           "4562"  
 				}
 				"Wearable5"
 				{
-					"ItemDef"           "5402"  
+					"ItemDef"           "4553"  
 				}
 			}
 			//Clumping Behavior
@@ -345,9 +345,9 @@
 		}
 	}
 	//=================================================================================
-	// Creature: Sven level3
+	// Creature: windranger level3
 	//=================================================================================
-	"sven_lv3"
+	"windranger_lv3"
 	{
 		//Scripts
 		"vscripts"					""
@@ -358,7 +358,7 @@
 
 		"Level"						"3"
 
-		"Model"						"models/heroes/sven/sven.vmdl"	// Model.
+		"Model"						"models/heroes/windrunner/windrunner.vmdl"	// Model.
 		"ModelScale" 				"1.50"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -366,8 +366,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_Sven"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"SoundSet"					"Hero_Windrunner"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -384,7 +384,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"sven"
+		"SelectionGroup"			"windranger"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -409,17 +409,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"200"		// Damage range min.
 		"AttackDamageMax"			"200"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"600"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
-		"ProjectileModel"			""			// Particle system model for projectile.
-		"ProjectileSpeed"			""			// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"700"			// Speed of projectile.
 
 		// Attributes
 		//----------------------------------------------------------------
@@ -481,23 +481,23 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"           "6077"  
+					"ItemDef"           "6835"  
 				}
 				"Wearable2"
 				{
-					"ItemDef"           "6080"  
+					"ItemDef"           "6831"  
 				}
 				"Wearable3"
 				{
-					"ItemDef"           "6082"  
+					"ItemDef"           "6836"  
 				}
 				"Wearable4"
 				{
-					"ItemDef"           "6074"  
+					"ItemDef"           "6838"  
 				}
 				"Wearable5"
 				{
-					"ItemDef"           "6081"  
+					"ItemDef"           "6837"  
 				}
 			}
 			//Clumping Behavior
