@@ -1,9 +1,9 @@
 "DOTAUnits"
 {
 	//=================================================================================
-	// Creature: Sven level1
+	// Creature: shadowfiend level1
 	//=================================================================================
-	"sven_lv1"
+	"shadowfiend_lv1"
 	{
 		//Scripts
 		"vscripts"					""
@@ -14,7 +14,7 @@
 
 		"Level"						"1"
 
-		"Model"						"models/heroes/sven/sven.vmdl"	// Model.
+		"Model"						"models/heroes/shadow_fiend/shadow_fiend.vmdl"	// Model.
 		"ModelScale" 				"0.8"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -22,8 +22,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_Sven"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"SoundSet"					"Hero_Nevermore"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -40,7 +40,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"sven"
+		"SelectionGroup"			"shadowfiend"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -65,17 +65,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"40"			// Damage range min.
 		"AttackDamageMax"			"40"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.45"      // Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"600"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
-		"ProjectileModel"			""			// Particle system model for projectile.
-		"ProjectileSpeed"			""			// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_nevermore/nevermore_base_attack.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"900"			// Speed of projectile.
 
 		// Attributes
 		//----------------------------------------------------------------
@@ -135,26 +135,10 @@
 			//Attach Wearables
 			"AttachWearables"
 			{
-				"Wearable1" 
-				{ 
-					"ItemDef"           "16"
-				}
-				"Wearable2" 
-				{ 
-					"ItemDef"           "17"
-				}
-				"Wearable3"
-				{
-					"ItemDef"           "18"  
-				}
-				"Wearable4"
-				{
-					"ItemDef"           "19"  
-				}
-				"Wearable5"
-				{
-					"ItemDef"           "20"  
-				}
+				"1" { "ItemDef" "387" } // Shadow Fiend's Head
+				"2" { "ItemDef" "509" } // Shadow Fiend's Ambient Effects
+				"3" { "ItemDef" "486" } // Shadow Fiend's Shoulders
+				"4" { "ItemDef" "488" } // Shadow Fiend's Arms
 			}
 			//Clumping Behavior
 			"DisableClumpingBehavior"	"0"
@@ -173,9 +157,9 @@
 		}
 	}
 	//=================================================================================
-	// Creature: Sven level2
+	// Creature: shadowfiend level2
 	//=================================================================================
-	"sven_lv2"
+	"shadowfiend_lv2"
 	{
 		//Scripts
 		"vscripts"					""
@@ -186,7 +170,7 @@
 
 		"Level"						"2"
 
-		"Model"						"models/heroes/sven/sven.vmdl"	// Model.
+		"Model"						"models/heroes/shadow_fiend/shadow_fiend.vmdl"	// Model.
 		"ModelScale" 				"1.00"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -194,8 +178,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_Sven"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"SoundSet"					"Hero_Nevermore"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -212,7 +196,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"sven"
+		"SelectionGroup"			"shadowfiend"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -237,17 +221,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"110"		// Damage range min.
 		"AttackDamageMax"			"110"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.40"		// Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"600"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
-		"ProjectileModel"			""			// Particle system model for projectile.
-		"ProjectileSpeed"			""			// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_nevermore/nevermore_base_attack.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"900"			// Speed of projectile.
 
 		// Attributes
 		//----------------------------------------------------------------
@@ -307,26 +291,10 @@
 			//Attach Wearables
 			"AttachWearables"
 			{
-				"Wearable1"
-				{
-					"ItemDef"           "5403"  
-				}
-				"Wearable2"
-				{
-					"ItemDef"           "5399"  
-				}
-				"Wearable3"
-				{
-					"ItemDef"           "5400"  
-				}
-				"Wearable4"
-				{
-					"ItemDef"           "5401"  
-				}
-				"Wearable5"
-				{
-					"ItemDef"           "5402"  
-				}
+				"1" { "ItemDef" "7279" } // Armor of the Diabolical Fiend
+				"2" { "ItemDef" "7193" } // Arms of the Diabolical Fiend
+				"3" { "ItemDef" "7188" } // Horns of the Diabolical Fiend
+				"4" { "ItemDef" "387" } // Shadow Fiend's Head
 			}
 			//Clumping Behavior
 			"DisableClumpingBehavior"	"0"
@@ -345,9 +313,9 @@
 		}
 	}
 	//=================================================================================
-	// Creature: Sven level3
+	// Creature: shadowfiend level3
 	//=================================================================================
-	"sven_lv3"
+	"shadowfiend_lv3"
 	{
 		//Scripts
 		"vscripts"					""
@@ -358,7 +326,7 @@
 
 		"Level"						"3"
 
-		"Model"						"models/heroes/sven/sven.vmdl"	// Model.
+		"Model"						"models/heroes/shadow_fiend/shadow_fiend.vmdl"	// Model.
 		"ModelScale" 				"1.50"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -366,8 +334,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_Sven"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"SoundSet"					"Hero_Nevermore"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -384,7 +352,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"sven"
+		"SelectionGroup"			"shadowfiend"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -409,17 +377,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"200"		// Damage range min.
 		"AttackDamageMax"			"200"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"600"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
-		"ProjectileModel"			""			// Particle system model for projectile.
-		"ProjectileSpeed"			""			// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_nevermore/nevermore_base_attack.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"900"			// Speed of projectile.
 
 		// Attributes
 		//----------------------------------------------------------------
@@ -479,26 +447,10 @@
 			//Attach Wearables
 			"AttachWearables"
 			{
-				"Wearable1"
-				{
-					"ItemDef"           "6077"  
-				}
-				"Wearable2"
-				{
-					"ItemDef"           "6080"  
-				}
-				"Wearable3"
-				{
-					"ItemDef"           "6082"  
-				}
-				"Wearable4"
-				{
-					"ItemDef"           "6074"  
-				}
-				"Wearable5"
-				{
-					"ItemDef"           "6081"  
-				}
+				"1" { "ItemDef" "9021" } // Horns of Eternal Harvest
+				"2" { "ItemDef" "9019" } // Grips of Eternal Harvest
+				"3" { "ItemDef" "9020" } // Pauldrons of Eternal Harvest
+				"4" { "ItemDef" "387" } // Shadow Fiend's Head
 			}
 			//Clumping Behavior
 			"DisableClumpingBehavior"	"0"

@@ -1,9 +1,9 @@
 "DOTAUnits"
 {
 	//=================================================================================
-	// Creature: Sven level1
+	// Creature: antimage level1
 	//=================================================================================
-	"sven_lv1"
+	"antimage_lv1"
 	{
 		//Scripts
 		"vscripts"					""
@@ -14,7 +14,7 @@
 
 		"Level"						"1"
 
-		"Model"						"models/heroes/sven/sven.vmdl"	// Model.
+		"Model"						"models/heroes/antimage/antimage.vmdl"	// Model.
 		"ModelScale" 				"0.8"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -22,8 +22,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_Sven"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"SoundSet"					"Hero_Antimage"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -40,7 +40,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"sven"
+		"SelectionGroup"			"antimage"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -66,8 +66,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"40"			// Damage range min.
-		"AttackDamageMax"			"40"			// Damage range max.
+		"AttackDamageMin"			"160"			// Damage range min.
+		"AttackDamageMax"			"160"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.45"      // Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
@@ -90,8 +90,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"			// Experience earn.
-		"BountyGoldMin"				"10"		// Gold earned min.
-		"BountyGoldMax"				"10"		// Gold earned max.
+		"BountyGoldMin"				"160"		// Gold earned min.
+		"BountyGoldMax"				"160"		// Gold earned max.
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -110,7 +110,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"600"		// Base health.
+		"StatusHealth"				"2600"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -135,26 +135,13 @@
 			//Attach Wearables
 			"AttachWearables"
 			{
-				"Wearable1" 
-				{ 
-					"ItemDef"           "16"
-				}
-				"Wearable2" 
-				{ 
-					"ItemDef"           "17"
-				}
-				"Wearable3"
-				{
-					"ItemDef"           "18"  
-				}
-				"Wearable4"
-				{
-					"ItemDef"           "19"  
-				}
-				"Wearable5"
-				{
-					"ItemDef"           "20"  
-				}
+				"1" { "ItemDef" "218" } // Anti-Mage's Belt
+				"2" { "ItemDef" "563" } // Antimage's Shoulders
+				"3" { "ItemDef" "335" } // Anti-Mage's Offhand Glaive
+				"4" { "ItemDef" "217" } // Anti-Mage's Arms
+				"5" { "ItemDef" "215" } // Anti-Mage's Head
+				"6" { "ItemDef" "1" } // Anti-Mage's Glaive
+				"7" { "ItemDef" "216" } // Anti-Mage's Armor
 			}
 			//Clumping Behavior
 			"DisableClumpingBehavior"	"0"
@@ -173,9 +160,9 @@
 		}
 	}
 	//=================================================================================
-	// Creature: Sven level2
+	// Creature: antimage level2
 	//=================================================================================
-	"sven_lv2"
+	"antimage_lv2"
 	{
 		//Scripts
 		"vscripts"					""
@@ -186,7 +173,7 @@
 
 		"Level"						"2"
 
-		"Model"						"models/heroes/sven/sven.vmdl"	// Model.
+		"Model"						"models/heroes/antimage/antimage.vmdl"	// Model.
 		"ModelScale" 				"1.00"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -194,8 +181,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_Sven"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"SoundSet"					"Hero_Antimage"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -212,7 +199,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"sven"
+		"SelectionGroup"			"antimage"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -238,8 +225,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"110"		// Damage range min.
-		"AttackDamageMax"			"110"		// Damage range max.
+		"AttackDamageMin"			"300"		// Damage range min.
+		"AttackDamageMax"			"300"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.40"		// Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
@@ -282,7 +269,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1100"		// Base health.
+		"StatusHealth"				"4500"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -307,26 +294,13 @@
 			//Attach Wearables
 			"AttachWearables"
 			{
-				"Wearable1"
-				{
-					"ItemDef"           "5403"  
-				}
-				"Wearable2"
-				{
-					"ItemDef"           "5399"  
-				}
-				"Wearable3"
-				{
-					"ItemDef"           "5400"  
-				}
-				"Wearable4"
-				{
-					"ItemDef"           "5401"  
-				}
-				"Wearable5"
-				{
-					"ItemDef"           "5402"  
-				}
+				"1" { "ItemDef" "8610" } // Bracers of Broken Scale
+				"2" { "ItemDef" "8678" } // Offhand Blade of Broken Scale
+				"3" { "ItemDef" "8611" } // Blade of Broken Scale
+				"4" { "ItemDef" "8620" } // Wraps of Broken Scale
+				"5" { "ItemDef" "8595" } // Armor of Broken Scale
+				"6" { "ItemDef" "8596" } // Helm of Broken Scale
+				"7" { "ItemDef" "8609" } // Belt of Broken Scale
 			}
 			//Clumping Behavior
 			"DisableClumpingBehavior"	"0"
@@ -345,9 +319,9 @@
 		}
 	}
 	//=================================================================================
-	// Creature: Sven level3
+	// Creature: antimage level3
 	//=================================================================================
-	"sven_lv3"
+	"antimage_lv3"
 	{
 		//Scripts
 		"vscripts"					""
@@ -358,7 +332,7 @@
 
 		"Level"						"3"
 
-		"Model"						"models/heroes/sven/sven.vmdl"	// Model.
+		"Model"						"models/heroes/antimage/antimage.vmdl"	// Model.
 		"ModelScale" 				"1.50"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -366,8 +340,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_Sven"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"SoundSet"					"Hero_Antimage"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -384,7 +358,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"sven"
+		"SelectionGroup"			"antimage"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -410,8 +384,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"200"		// Damage range min.
-		"AttackDamageMax"			"200"		// Damage range max.
+		"AttackDamageMin"			"550"		// Damage range min.
+		"AttackDamageMax"			"550"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
@@ -454,7 +428,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3000"		// Base health.
+		"StatusHealth"				"8000"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -479,26 +453,13 @@
 			//Attach Wearables
 			"AttachWearables"
 			{
-				"Wearable1"
-				{
-					"ItemDef"           "6077"  
-				}
-				"Wearable2"
-				{
-					"ItemDef"           "6080"  
-				}
-				"Wearable3"
-				{
-					"ItemDef"           "6082"  
-				}
-				"Wearable4"
-				{
-					"ItemDef"           "6074"  
-				}
-				"Wearable5"
-				{
-					"ItemDef"           "6081"  
-				}
+				"1" { "ItemDef" "7277" } // Golden Basher of Mage Skulls
+				"2" { "ItemDef" "7276" } // Golden Offhand Basher of Mage Skulls
+				"3" { "ItemDef" "8535" } // Belt of the Fervent Conscript
+				"4" { "ItemDef" "8536" } // Shoulder Plate of the Fervent Conscript
+				"5" { "ItemDef" "8543" } // Bracers of the Fervent Conscript
+				"6" { "ItemDef" "8545" } // Off-Hand Blade of the Fervent Conscript
+				"7" { "ItemDef" "8546" } // Style of the Fervent Conscript
 			}
 			//Clumping Behavior
 			"DisableClumpingBehavior"	"0"

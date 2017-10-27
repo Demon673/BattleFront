@@ -1,9 +1,9 @@
 "DOTAUnits"
 {
 	//=================================================================================
-	// Creature: drowranger level1
+	// Creature: facelessvoid level1
 	//=================================================================================
-	"drowranger_lv1"
+	"facelessvoid_lv1"
 	{
 		//Scripts
 		"vscripts"					""
@@ -14,7 +14,7 @@
 
 		"Level"						"1"
 
-		"Model"						"models/heroes/drow/drow.vmdl"	// Model.
+		"Model"						"models/heroes/faceless_void/faceless_void.vmdl"	// Model.
 		"ModelScale" 				"0.8"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -22,8 +22,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_DrowRanger"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+		"SoundSet"					"Hero_FacelessVoid"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -40,7 +40,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"drowranger"
+		"SelectionGroup"			"facelessvoid"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -65,17 +65,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"40"			// Damage range min.
-		"AttackDamageMax"			"40"			// Damage range max.
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"160"			// Damage range min.
+		"AttackDamageMax"			"160"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.45"      // Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"600"		// Range within a target can be attacked.
+		"AttackRange"				"100"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
-		"ProjectileModel"			"particles/units/heroes/hero_drow/drow_base_attack.vpcf"			// Particle system model for projectile.
-		"ProjectileSpeed"			"900"			// Speed of projectile.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			""			// Speed of projectile.
 
 		// Attributes
 		//----------------------------------------------------------------
@@ -90,8 +90,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"			// Experience earn.
-		"BountyGoldMin"				"10"		// Gold earned min.
-		"BountyGoldMax"				"10"		// Gold earned max.
+		"BountyGoldMin"				"160"		// Gold earned min.
+		"BountyGoldMax"				"160"		// Gold earned max.
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -110,7 +110,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"600"		// Base health.
+		"StatusHealth"				"2600"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -135,35 +135,11 @@
 			//Attach Wearables
 			"AttachWearables"
 			{
-					"Wearable1"
-					{
-						"ItemDef"           "5194"  
-					}
-					"Wearable2"
-					{
-						"ItemDef"           "5195"  
-					}
-					"Wearable3"
-					{
-						"ItemDef"           "5196"  
-					}
-					"Wearable4"
-					{
-						"ItemDef"           "5197"  
-					}
-
-					"Wearable5"
-					{
-						"ItemDef"           "5198"  
-					}
-					"Wearable6"
-					{
-						"ItemDef"           "5199"  
-					}
-					"Wearable7"
-					{
-						"ItemDef"           "5200"  
-					}
+				"1" { "ItemDef" "5868" } // Primal Form of the Tentacular Timelord
+				"2" { "ItemDef" "5898" } // Mace of the Tentacular Timelord
+				"3" { "ItemDef" "5861" } // Bracers of the Tentacular Timelord
+				"4" { "ItemDef" "5896" } // Armor of the Tentacular Timelord
+				"5" { "ItemDef" "5897" } // Skirt of the Tentacular Timelord
 			}
 			//Clumping Behavior
 			"DisableClumpingBehavior"	"0"
@@ -182,9 +158,9 @@
 		}
 	}
 	//=================================================================================
-	// Creature: drowranger level2
+	// Creature: facelessvoid level2
 	//=================================================================================
-	"drowranger_lv2"
+	"facelessvoid_lv2"
 	{
 		//Scripts
 		"vscripts"					""
@@ -195,7 +171,7 @@
 
 		"Level"						"2"
 
-		"Model"						"models/heroes/drow/drow.vmdl"	// Model.
+		"Model"						"models/heroes/faceless_void/faceless_void.vmdl"	// Model.
 		"ModelScale" 				"1.00"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -203,8 +179,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_DrowRanger"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+		"SoundSet"					"Hero_FacelessVoid"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -221,7 +197,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"drowranger"
+		"SelectionGroup"			"facelessvoid"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -246,17 +222,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"110"		// Damage range min.
-		"AttackDamageMax"			"110"		// Damage range max.
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"300"		// Damage range min.
+		"AttackDamageMax"			"300"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.40"		// Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"600"		// Range within a target can be attacked.
+		"AttackRange"				"100"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
-		"ProjectileModel"			"particles/units/heroes/hero_drow/drow_base_attack.vpcf"			// Particle system model for projectile.
-		"ProjectileSpeed"			"900"			// Speed of projectile.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			""			// Speed of projectile.
 
 		// Attributes
 		//----------------------------------------------------------------
@@ -291,7 +267,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1100"		// Base health.
+		"StatusHealth"				"4500"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -316,35 +292,11 @@
 			//Attach Wearables
 			"AttachWearables"
 			{
-					"Wearable1"
-					{
-						"ItemDef"           "5883"  
-					}
-					"Wearable2"
-					{
-						"ItemDef"           "5974"  
-					}
-					"Wearable3"
-					{
-						"ItemDef"           "5975"  
-					}
-					"Wearable4"
-					{
-						"ItemDef"           "5979"  
-					}
-
-					"Wearable5"
-					{
-						"ItemDef"           "5985"  
-					}
-					"Wearable6"
-					{
-						"ItemDef"           "5986"  
-					}
-					 "Wearable7"
-					{
-						"ItemDef"           "5989"  
-					}
+				"1" { "ItemDef" "5063" } // Headwraps of the Acolyte of Clasz
+				"2" { "ItemDef" "5059" } // Girdpiece of the Acolyte of Clasz
+				"3" { "ItemDef" "5061" } // Gauntlets of the Acolyte of Clasz
+				"4" { "ItemDef" "5062" } // Time-Mace of the Acolyte of Clasz
+				"5" { "ItemDef" "5060" } // Mantle of the Acolyte of Clasz
 			}
 			//Clumping Behavior
 			"DisableClumpingBehavior"	"0"
@@ -363,9 +315,9 @@
 		}
 	}
 	//=================================================================================
-	// Creature: drowranger level3
+	// Creature: facelessvoid level3
 	//=================================================================================
-	"drowranger_lv3"
+	"facelessvoid_lv3"
 	{
 		//Scripts
 		"vscripts"					""
@@ -376,7 +328,7 @@
 
 		"Level"						"3"
 
-		"Model"						"models/heroes/drow/drow.vmdl"	// Model.
+		"Model"						"models/heroes/faceless_void/faceless_void.vmdl"	// Model.
 		"ModelScale" 				"1.50"
 
 		// "MinimapIcon"				"minimap_tower90"
@@ -384,8 +336,8 @@
 
 		// Sounds
 		//----------------------------------------------------------------
-		"SoundSet"					"Hero_DrowRanger"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+		"SoundSet"					"Hero_FacelessVoid"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
 		// "IdleExpression"			"scenes/default_idle.vcd"
 
 		// Flags
@@ -402,7 +354,7 @@
 
 		// Selection
 		//----------------------------------------------------------------
-		"SelectionGroup"			"drowranger"
+		"SelectionGroup"			"facelessvoid"
 		"SelectOnSpawn"				"1"
 		"IgnoreAddSummonedToSelection" "1"
 
@@ -427,17 +379,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"200"		// Damage range min.
-		"AttackDamageMax"			"200"		// Damage range max.
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"550"		// Damage range min.
+		"AttackDamageMax"			"550"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"600"		// Range within a target can be attacked.
+		"AttackRange"				"100"		// Range within a target can be attacked.
 		"AttackRangeBuffer"			"250"		// Extra range the target can move without canceling the attack
-		"ProjectileModel"			"particles/units/heroes/hero_drow/drow_base_attack.vpcf"			// Particle system model for projectile.
-		"ProjectileSpeed"			"900"			// Speed of projectile.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			""			// Speed of projectile.
 
 		// Attributes
 		//----------------------------------------------------------------
@@ -472,7 +424,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3000"		// Base health.
+		"StatusHealth"				"8000"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -497,35 +449,11 @@
 			//Attach Wearables
 			"AttachWearables"
 			{
-					"Wearable1"
-					{
-						"ItemDef"           "6552"  
-					}
-					"Wearable2"
-					{
-						"ItemDef"           "6553"  
-					}
-					"Wearable3"
-					{
-						"ItemDef"           "6554"  
-					}
-					"Wearable4"
-					{
-						"ItemDef"           "6555"  
-					}
-
-					"Wearable5"
-					{
-						"ItemDef"           "6556"  
-					}
-					"Wearable6"
-					{
-						"ItemDef"           "6557"  
-					}
-					 "Wearable7"
-					{
-						"ItemDef"           "6558"  
-					}
+				"1" { "ItemDef" "7379" } // Mace of the Endless Plane
+				"2" { "ItemDef" "7377" } // Helm of the Endless Plane
+				"3" { "ItemDef" "8374" } // Bracers of the Endless Plane
+				"4" { "ItemDef" "7378" } // Pauldron of the Endless Plane
+				"5" { "ItemDef" "8317" } // Belt of the Endless Plane
 			}
 			//Clumping Behavior
 			"DisableClumpingBehavior"	"0"
