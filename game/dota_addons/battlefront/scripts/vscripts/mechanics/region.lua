@@ -2,19 +2,7 @@ if Region == nil then
 	Region = class({})
 	Region.RegionEntities = {}
 	Region.PlacementRegionEntities = {}
-	Region.EnemyRegionEntities = {}
-end
-
-function CDOTA_PlayerResource:GetPlayerPosition(iPlayerID)
-	return GameRules.TeamPosition[self:GetTeam(iPlayerID)]
-end
-
-function CDOTAPlayer:GetPlayerPosition()
-	return GameRules.TeamPosition[PlayerResource:GetTeam(self:GetPlayerID())]
-end
-
-function CDOTA_BaseNPC:GetPlayerPosition()
-	return GameRules.TeamPosition[self:GetTeam()]
+	Region.OffensiveRegionEntities = {}
 end
 
 function Region:GetRegion(iPosition)
@@ -37,14 +25,14 @@ function Region:IsPositionInPlacementRegion(vLocation, iPosition)
 	return hPlacementRegion:IsPositionInTrigger2D(vLocation)
 end
 
-function Region:GetEnemyRegion(iPosition)
-	return self.EnemyRegionEntities[iPosition]
+function Region:GetOffensiveRegion(iPosition)
+	return self.OffensiveRegionEntities[iPosition]
 end
-function Region:IsPositionInEnemyRegion(vLocation, iPosition)
-	local hEnemyRegion = self:GetEnemyRegion(iPosition)
-	if hEnemyRegion == nil then return false end
+function Region:IsPositionInOffensiveRegion(vLocation, iPosition)
+	local hOffensiveRegion = self:GetOffensiveRegion(iPosition)
+	if hOffensiveRegion == nil then return false end
 
-	return hEnemyRegion:IsPositionInTrigger2D(vLocation)
+	return hOffensiveRegion:IsPositionInTrigger2D(vLocation)
 end
 
 function Region:Init()
@@ -63,9 +51,9 @@ function Region:Init()
 			if hPlacementRegion ~= nil then
 				self.PlacementRegionEntities[iPosition] = hPlacementRegion
 			end
-			local hEnemyRegion = Entities:FindByName(nil, "enemy_region_"..tostring(iPosition))
-			if hEnemyRegion ~= nil then
-				self.EnemyRegionEntities[iPosition] = hEnemyRegion
+			local hOffensiveRegion = Entities:FindByName(nil, "enemy_region_"..tostring(iPosition))
+			if hOffensiveRegion ~= nil then
+				self.OffensiveRegionEntities[iPosition] = hOffensiveRegion
 			end
 		end
 	end

@@ -1,10 +1,9 @@
 purchase_unit = purchase_unit or class({})
 
-function purchase_unit:CastFilterResultLocation(vLocation)
+function purchase_unit:CastFilterResult()
 	if IsServer() then
-		local iPlayerPosition = self:GetCaster():GetPlayerPosition()
-		if iPlayerPosition == nil or not Region:IsPositionInPlacementRegion(vLocation, iPlayerPosition) then
-			self.error = "error_invalid_location"
+		if Round:GetPhase() ~= Round.CONSTANT.ROUND_PHASE_DEPLOYMENT then
+			self.error = "error_only_during_deployment_phase_can_do_this"
 			return UF_FAIL_CUSTOM
 		end
 	else
@@ -12,7 +11,7 @@ function purchase_unit:CastFilterResultLocation(vLocation)
 	end
 end
 
-function purchase_unit:GetCustomCastErrorLocation(vLocation)
+function purchase_unit:GetCustomCastError()
 	return self.error or ""
 end
 
@@ -36,16 +35,18 @@ end
 
 function purchase_unit:OnSpellStart()
 	local hCaster = self:GetCaster()
-	local vLocation = self:GetCursorPosition()
-
+	local iPosition = hCaster:GetPosition()
+	local hPlacementRegion = Region:GetPlacementRegion(iPosition)
+	
 	local sUnitType = self.poor[RandomInt(1, #self.poor)]
-	print(sUnitType)
 	local list = UnitTree:GetListByUnitType(sUnitType)
 	if list then
 		local sUnitName = list[RandomInt(1, #list)]
 
-		local hNewUnit = CreateUnitByName(sUnitName, vLocation, true, nil, nil, hCaster:GetTeam())
+		local hNewUnit = CreateUnitByName(sUnitName, hPlacementRegion:GetOrigin(), true, nil, nil, hCaster:GetTeam())
 		hNewUnit:SetOwner(hCaster)
 		hNewUnit:SetControllableByPlayer(hCaster:GetPlayerOwnerID(), false)
+
+		Unit:AddDefenseUnit(hNewUnit)
 	end
 end

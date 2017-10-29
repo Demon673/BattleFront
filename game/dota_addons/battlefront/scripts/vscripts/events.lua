@@ -15,6 +15,7 @@ function BattleFront:OnGameRulesStateChange()
 		--print("OnGameRulesStateChange: Custom Game Setup")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
+		Tutorial:AddBot("npc_dota_hero_visage", "", "", false)
 		--print("OnGameRulesStateChange: Hero Selection")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_STRATEGY_TIME then
@@ -34,6 +35,16 @@ function BattleFront:OnGameRulesStateChange()
 		--print("OnGameRulesStateChange: Pre Game")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+		local testUnits = {"melee_creep_lv1","melee_creep_lv2","melee_creep_lv3"}
+		local testTeam = DOTA_TEAM_BADGUYS
+		local testPosition = GameRules.TeamPosition[testTeam]
+		local testRegion = Region:GetPlacementRegion(testPosition)
+		
+		for i, sUnitName in pairs(testUnits) do
+			local hNewUnit = CreateUnitByName(sUnitName, testRegion:GetOrigin(), true, nil, nil, testTeam)
+
+			Unit:AddDefenseUnit(hNewUnit, testTeam)
+		end
 		--print("OnGameRulesStateChange: Game In Progress")
 
 	elseif nNewState == DOTA_GAMERULES_STATE_POST_GAME then
@@ -126,9 +137,10 @@ function BattleFront:OnEntityKilled_Creature(event)
 	if hDeadCreature == nil then
 		return
 	end
-
 	local hAttackerUnit = EntIndexToHScript(event.entindex_attacker)
-	if hAttackerUnit and hAttackerUnit:IsRealHero() then
+
+	if Round:GetPhase() == Round.CONSTANT.ROUND_PHASE_IN_BATTLE then
+		Round:CheckBattleUnits()
 	end
 end
 

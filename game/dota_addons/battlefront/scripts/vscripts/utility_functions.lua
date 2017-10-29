@@ -1,5 +1,44 @@
 --[[ Utility Functions ]]
 
+---------------------------------------------------------------------------
+-- Position
+---------------------------------------------------------------------------
+function CDOTA_PlayerResource:GetPosition(iPlayerID)
+	return GameRules.TeamPosition[self:GetTeam(iPlayerID)]
+end
+
+function CDOTAPlayer:GetPosition()
+	return GameRules.TeamPosition[PlayerResource:GetTeam(self:GetPlayerID())]
+end
+
+function CDOTA_BaseNPC:GetPosition()
+	return GameRules.TeamPosition[self:GetTeam()]
+end
+
+function GetTeamByPosition(iPosition)
+	for iTeam, _iPosition in pairs(GameRules.TeamPosition) do
+		if iPosition == _iPosition then
+			return iTeam
+		end
+	end
+end
+
+function GetEnemyTeam(iPosition)
+	local iEnemyPosition = iPosition - 1
+
+	while iEnemyPosition ~= iPosition do
+		if iEnemyPosition <= 0 then
+			iEnemyPosition = GameRules.TeamPosition.MAX_POSITION
+		end
+
+		local iEnemyTeam = GetTeamByPosition(iEnemyPosition)		
+		if #(Unit:GetDefenseUnits(iEnemyTeam)) ~= 0 then
+			return iEnemyTeam
+		end
+
+		iEnemyPosition = iEnemyPosition - 1
+	end
+end
 
 ---------------------------------------------------------------------------
 -- Broadcast messages to screen
@@ -76,6 +115,16 @@ end
 function table.merge(input1, input2)
 	for k,v in pairs(input2) do
 		input1[k] = v
+	end
+end
+
+function table.remove_value(t, value)
+	if t == nil or type(t) ~= "table" then error("expected a table but got a "..type(t)) end
+	for i = #t, 1, -1 do
+		if t[i] == value then
+			table.remove(t, i)
+			return
+		end
 	end
 end
 

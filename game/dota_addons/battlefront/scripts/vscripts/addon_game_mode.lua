@@ -12,6 +12,7 @@ require("libraries/keyvalues")
 --mechanics
 require("mechanics/region")
 require("mechanics/unit_tree")
+require("mechanics/unit")
 require("mechanics/wearables")
 
 --process
@@ -78,6 +79,7 @@ function BattleFront:InitGameMode()
 
 	GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
 	GameRules:GetGameModeEntity():SetCustomGameForceHero("npc_dota_hero_visage")
+	GameRules:GetGameModeEntity():SetBotThinkingEnabled(false)
 	
 	GameRules:SetUseUniversalShopMode(true)
 	GameRules:SetHeroRespawnEnabled(false)
@@ -88,9 +90,10 @@ function BattleFront:InitGameMode()
 	GameRules:SetHeroSelectionTime(0)
 	GameRules:SetStrategyTime(2)
 	GameRules:SetShowcaseTime(0)
-	GameRules:SetPreGameTime(0)
+	GameRules:SetPreGameTime(5)
 	
 	LinkLuaModifier("modifier_hero", "modifiers/modifier_hero.lua", LUA_MODIFIER_MOTION_NONE)
+	LinkLuaModifier("modifier_unit_pause", "modifiers/modifier_unit_pause.lua", LUA_MODIFIER_MOTION_NONE)
 
 	ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(BattleFront, "OnGameRulesStateChange"), self)
 	ListenToGameEvent("dota_player_reconnected", Dynamic_Wrap(BattleFront, "OnPlayerReconnected"), self)
