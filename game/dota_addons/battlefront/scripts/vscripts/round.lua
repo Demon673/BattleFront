@@ -358,11 +358,16 @@ function Round:CheckBattleUnits()
 			end
 		end
 
+		print(bAllUnitsIsDead)
+		print(bAllEnemiesIsDead)
+
 		if not (bAllUnitsIsDead or bAllEnemiesIsDead) then
+			print("false")
 			return false
 		end
 	end
 
+	print("true")
 	self.EndTime = 0
 	return true
 end
