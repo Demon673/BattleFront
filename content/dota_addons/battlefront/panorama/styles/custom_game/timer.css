@@ -1,5 +1,93 @@
 .TimerRoot
 {
-    width: 100%;
-    height: 100%;
+	horizontal-align: center;
+	vertical-align: top;
+
+	background-image: url("s2r://panorama/images/hud/reborn/bg_timer_psd.vtex");
+	background-size: 100%;
+	width: 135px;
+	height: 69px;
 }
+
+	#PhaseInitLabel
+	{
+		horizontal-align: center;
+		vertical-align: top;
+
+		color: white;
+
+		visibility: collapse;
+	}
+	.ROUND_PHASE_INIT #PhaseInitLabel
+	{
+		visibility: visible;
+	}
+	#PhaseDeploymentLabel
+	{
+		horizontal-align: center;
+		vertical-align: top;
+
+		color: white;
+
+		visibility: collapse;
+	}
+	.ROUND_PHASE_DEPLOYMENT #PhaseDeploymentLabel
+	{
+		visibility: visible;
+	}
+	#PhasePreBattleLabel
+	{
+		horizontal-align: center;
+		vertical-align: top;
+
+		color: white;
+
+		visibility: collapse;
+	}
+	.ROUND_PHASE_PRE_BATTLE #PhasePreBattleLabel
+	{
+		visibility: visible;
+	}
+	#PhaseInBattleLabel
+	{
+		horizontal-align: center;
+		vertical-align: center;
+
+		color: white;
+		font-size: 20px;
+		margin-top: -5px;
+
+		visibility: collapse;
+	}
+	.ROUND_PHASE_IN_BATTLE #PhaseInBattleLabel
+	{
+		visibility: visible;
+	}
+	#PhaseFinishedBattleLabel
+	{
+		horizontal-align: center;
+		vertical-align: top;
+
+		color: white;
+
+		visibility: collapse;
+	}
+	.ROUND_PHASE_FINISHED_BATTLE #PhaseFinishedBattleLabel
+	{
+		visibility: visible;
+	}
+
+	#CountdownNumber
+	{
+		horizontal-align: center;
+		vertical-align: bottom;
+
+		color: white;
+		font-size: 35px;
+
+		visibility: visible;
+	}
+	.ROUND_PHASE_IN_BATTLE #CountdownNumber
+	{
+		visibility: collapse;
+	}

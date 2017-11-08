@@ -21,7 +21,12 @@
 
 	<Panel class="CustomHudRoot" hittest="false">
 		<Panel id="Timer" class="TimerRoot" hittest="false">
-
+			<Label id="PhaseInitLabel" text="#Phase_Init"/>
+			<Label id="PhaseDeploymentLabel" text="#Phase_Deployment"/>
+			<Label id="PhasePreBattleLabel" text="#Phase_PreBattle"/>
+			<Label id="PhaseInBattleLabel" text="#Phase_InBattle"/>
+			<Label id="PhaseFinishedBattleLabel" text="#Phase_FinishedBattle"/>
+			<Label id="CountdownNumber" text="{d:countdown}"/>
 		</Panel>
 	</Panel>
 </root>

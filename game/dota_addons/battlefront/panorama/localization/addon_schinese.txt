@@ -1,0 +1,8 @@
+"addon"
+{
+	"Phase_Init"			"初始游戏"
+	"Phase_Deployment"		"部署阶段"
+	"Phase_PreBattle"		"回合准备"
+	"Phase_InBattle"		"战斗开始"
+	"Phase_FinishedBattle"	"战斗结束"
+}

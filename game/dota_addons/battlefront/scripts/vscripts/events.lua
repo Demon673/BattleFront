@@ -91,6 +91,14 @@ function BattleFront:OnNPCSpawned_PlayerHero(event)
 	if hPlayerHero ~= nil then
 		hPlayerHero:AddNewModifier(hPlayerHero, nil, "modifier_hero", nil)
 
+		for i = DOTA_ITEM_SLOT_1, DOTA_ITEM_SLOT_9, 1 do
+			local hItem = hPlayerHero:GetItemInSlot(i)
+			if hItem then
+				print(hItem)
+				hItem:RemoveSelf()
+			end
+		end
+
 		for i = 0, hPlayerHero:GetAbilityCount()-1, 1 do
 			local hAbility = hPlayerHero:GetAbilityByIndex(i)
 			if hAbility then

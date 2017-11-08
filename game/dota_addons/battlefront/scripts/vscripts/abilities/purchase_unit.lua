@@ -35,7 +35,7 @@ end
 
 function purchase_unit:OnSpellStart()
 	local hCaster = self:GetCaster()
-	local iPosition = hCaster:GetPosition()
+	local iPosition = hCaster:GetTeamPosition()
 	local hPlacementRegion = Region:GetPlacementRegion(iPosition)
 	
 	local sUnitType = self.poor[RandomInt(1, #self.poor)]

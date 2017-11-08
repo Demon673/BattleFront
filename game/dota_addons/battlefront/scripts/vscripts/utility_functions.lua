@@ -1,21 +1,21 @@
 --[[ Utility Functions ]]
 
 ---------------------------------------------------------------------------
--- Position
+-- Team Position
 ---------------------------------------------------------------------------
-function CDOTA_PlayerResource:GetPosition(iPlayerID)
+function CDOTA_PlayerResource:GetTeamPosition(iPlayerID)
 	return GameRules.TeamPosition[self:GetTeam(iPlayerID)]
 end
 
-function CDOTAPlayer:GetPosition()
+function CDOTAPlayer:GetTeamPosition()
 	return GameRules.TeamPosition[PlayerResource:GetTeam(self:GetPlayerID())]
 end
 
-function CDOTA_BaseNPC:GetPosition()
+function CDOTA_BaseNPC:GetTeamPosition()
 	return GameRules.TeamPosition[self:GetTeam()]
 end
 
-function GetTeamByPosition(iPosition)
+function GetTeamByTeamPosition(iPosition)
 	for iTeam, _iPosition in pairs(GameRules.TeamPosition) do
 		if iPosition == _iPosition then
 			return iTeam
@@ -31,7 +31,7 @@ function GetEnemyTeam(iPosition)
 			iEnemyPosition = GameRules.TeamPosition.MAX_POSITION
 		end
 
-		local iEnemyTeam = GetTeamByPosition(iEnemyPosition)		
+		local iEnemyTeam = GetTeamByTeamPosition(iEnemyPosition)		
 		if #(Unit:GetDefenseUnits(iEnemyTeam)) ~= 0 then
 			return iEnemyTeam
 		end

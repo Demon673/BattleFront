@@ -3,7 +3,7 @@ function OnStartTouch(keys)
 	-- caller       entity
 	-- activator    entity
 	local hUnit = keys.activator
-	local iPosition = hUnit:GetPosition()
+	local iPosition = hUnit:GetTeamPosition()
 	
 	if iPosition ~= nil and Round:GetPhase() <= Round.CONSTANT.ROUND_PHASE_PRE_BATTLE then
 		local hOffensiveRegion = Region:GetOffensiveRegion(iPosition)
